@@ -54,4 +54,6 @@ class EjemploExcepciones:
 
     #AttributeError
     def attributeError(self):
-        raise AttributeError
+        mensaje = "hola mundo".error
+        if mensaje == AttributeError:
+            raise AttributeError
