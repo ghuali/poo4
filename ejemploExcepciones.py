@@ -8,6 +8,7 @@ class EjemploExcepciones:
 
     #ValueError
     def valueError(self):
+        3 * int("f")
         raise ValueError
     #FileNotFoundError
     def fileNotFoundError(self):
