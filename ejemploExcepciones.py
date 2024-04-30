@@ -39,8 +39,11 @@ class EjemploExcepciones:
         raise IndexError
 
     #KeyboardInterrupt
-    def keyboardInterrupt(self):
-        raise KeyboardInterrupt
+    def keyboardInterrupt(numero):
+        try:
+            numero = int(input("escribe un numero: "))
+        except:
+            raise KeyboardInterrupt
 
     #UnicodeDecodeError
     def unicodeDecodeError(self):
