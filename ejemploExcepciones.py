@@ -12,7 +12,9 @@ class EjemploExcepciones:
         raise ValueError
     #FileNotFoundError
     def fileNotFoundError(self):
-        raise FileNotFoundError
+        abrir = open("file.txt")
+        if abrir != open("file.txt"):
+            raise FileNotFoundError
 
     #TypeError
     def typeError(self):
