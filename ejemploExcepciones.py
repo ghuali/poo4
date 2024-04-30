@@ -17,8 +17,9 @@ class EjemploExcepciones:
             raise FileNotFoundError
 
     #TypeError
-    def typeError(self):
-        raise TypeError
+    def typeError(self,*, a, b):
+        if (b == str):
+            raise TypeError
 
     #PermissionError
     def permissionError(self):
