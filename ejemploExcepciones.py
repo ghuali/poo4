@@ -22,8 +22,12 @@ class EjemploExcepciones:
             raise TypeError
 
     #PermissionError
-    def permissionError(self):
-        raise PermissionError
+    def permissionError(file):
+        try:
+            with open("nopermiso.txt", "r") as file:
+                file.write("Hola")
+        except:
+            raise PermissionError
 
     #IndexError
     def indexError(self):
