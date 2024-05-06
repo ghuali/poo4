@@ -73,7 +73,7 @@ class Card:
            
         
         card = self.value + other.value
-        if (self.value or other.value) == self.A_VALUE:
+        if self.value == self.A_VALUE:
             card = self.A_VALUE
         elif card > self.K_VALUE:
             card = self.value
@@ -81,7 +81,7 @@ class Card:
             card = other.value
         elif (self.value or other.value) < self.K_VALUE or other.K_VALUE:
             card = self.value + other.value
-        newpalo = ''
+        newpalo = ""
         if self.value > other.value:
             newpalo = self.suit 
         elif self.value < other.value:
@@ -90,6 +90,7 @@ class Card:
             newpalo = self.suit
         elif other.value == other.A_VALUE:
             newpalo = other.suit    
+        
         return Card(card,newpalo)
 
     def is_ace(self) -> bool:
