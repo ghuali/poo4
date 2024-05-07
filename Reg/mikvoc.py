@@ -6,4 +6,4 @@ class mikvoc:
         
 @staticmethod
 def buscar(texto: str) -> list:
-    
+    #patón de palabras que empiezan por vocal minúscula
