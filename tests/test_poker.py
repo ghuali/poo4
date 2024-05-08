@@ -86,9 +86,7 @@ def test_card_is_greater_than_other_card(card1: Card, card2: Card):
 
 
 def test_add_cards(card1: Card, card2: Card, card3: Card, card5: Card):
-    card = card1 + card2
-    assert card.value == 1
-    assert card.suit == Card.HEARTS
+
 
     card = card2 + card3
     assert card.value == 1
@@ -97,6 +95,10 @@ def test_add_cards(card1: Card, card2: Card, card3: Card, card5: Card):
     card = card2 + card5
     assert card.value == 9
     assert card.suit == Card.SPADES
+
+    card = card1 + card2
+    assert card.value == 1
+    assert card.suit == Card.HEARTS
 
 
 def test_default_message_for_invalid_card_error():

@@ -73,23 +73,21 @@ class Card:
            
         
         card = self.value + other.value
-        if self.value == self.A_VALUE:
-            card = self.A_VALUE
+        if self.value == 1:
+            card = 1
         elif card > self.K_VALUE:
-            card = self.value
-        elif card > other.K_VALUE:
-            card = other.value
-        elif (self.value or other.value) < self.K_VALUE or other.K_VALUE:
-            card = self.value + other.value
+            card = 1
+
         newpalo = ""
         if self.value > other.value:
             newpalo = self.suit 
         elif self.value < other.value:
-            newpalo = other.suit 
-        elif self.value == self.A_VALUE:
+            newpalo = other.suit
+        if self.value == 1:
             newpalo = self.suit
-        elif other.value == other.A_VALUE:
-            newpalo = other.suit    
+        elif other.value == 1:
+            newpalo = other.suit     
+   
         
         return Card(card,newpalo)
 
@@ -115,4 +113,4 @@ class InvalidCardError(Exception):
     - El mensaje por defecto de esta excepción debe ser: 🃏 Invalid card
     - Si se añaden otros mensajes aparecerán como: 🃏 Invalid card: El mensaje que sea'''
     def __init__(self, Invalido: str="🃏 Invalid card") -> None:
-        super().__init__(Invalido)  
+        super().__init__(Invalido)
